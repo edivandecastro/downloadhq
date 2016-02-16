@@ -14,7 +14,7 @@ chapters = eval("[#{gets.chomp}]")
 chapters.each do |chapter|
   agent = Mechanize.new
   pag = 0
-  while true
+  loop do
     pag = pag.succ
     pag = pag.to_s.rjust(2, "0") if pag.to_s.size == 1
     chapter = chapter.to_s.rjust(2, "0") if chapter.to_s.size == 1
